@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: /assets/img/12.jpg
+title: AI for COVID-19 diagnosis
+description: COVID-19 prediction through cough audio using deep-learning (hosted on AWS EC2).
+img: /assets/img/cough.jpg
+redirect: http://18.224.109.135:8501/
 importance: 1
-category: work
 ---
 
 Every project has a beautiful feature showcase page.

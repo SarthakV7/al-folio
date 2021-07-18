@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
+title: Mercari Price Suggestion challenge
+description: Solving Mercari price suggestion challenge on kaggle using only linear models.
+img: /assets/img/p4.jpg
+redirect: https://www.kaggle.com/sarthakvajpayee/top-6-linear-models-only
 importance: 4
-category: fun
 ---
 
 Every project has a beautiful feature showcase page.

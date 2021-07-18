@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: /assets/img/1.jpg
+title: Google Quest Q&A labelling
+description: Implementation of Transformers on a NLP dataset by Google (Kaggle competition).
+img: /assets/img/p3.jpg
+redirect: https://www.kaggle.com/sarthakvajpayee/top-4-4-bert-roberta-xlnet
 importance: 3
-category: fun
 ---
 
 Every project has a beautiful feature showcase page.
