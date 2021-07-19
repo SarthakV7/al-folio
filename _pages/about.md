@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 I am a freelance Data Scientist also working part time at [Applied Roots](https://www.appliedroots.com/){:target="\_blank"}.
 
 At [Applied Roots](https://www.appliedroots.com/){:target="\_blank"}, one of the major tasks is evaluating, debugging our student's assignments, and giving them the right feedback.
-I am a part of the team where we evaluate 400 assignments on an average daily, and resolve our students machine learning concept related queries.
+I am a part of the team where we evaluate 600 assignments on an average daily, and resolve our students machine learning concept related queries.
 Apart from the evaluation and queries resolution, we are also responsible for updating the assignments to keep them in pace with the
 AI/Data Science industry.
 
