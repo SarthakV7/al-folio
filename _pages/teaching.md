@@ -25,7 +25,7 @@ Here are some awesome languages, libraries and frameworks that I have picked up 
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  background-color: #ff4545;
+  background-color: #1ec78b;
 }
 </style>
   <button class="button" disabled>Data Analysis</button>
