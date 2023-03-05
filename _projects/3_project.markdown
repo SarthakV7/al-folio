@@ -1,10 +1,10 @@
 ---
 layout: page
-title: COVID-19 Dashboard
-description: COVID-19 dashboard with interactive visualization and analysis on global data.
-img: /assets/img/p1.jpg
-redirect: https://covid19-global-dashboard-sv.herokuapp.com/
-importance: 1
+title: Netflix - Global shows
+description: Netflix show Genre prediction using transformers (Interactive EDA also).
+img: /assets/img/p8.jpg
+redirect: https://www.kaggle.com/sarthakvajpayee/netflix-interactive-eda-genre-prediction-bert
+importance: 8
 ---
 
 Every project has a beautiful feature showcase page.

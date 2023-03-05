@@ -3,7 +3,7 @@ layout: page
 title: AI image colorizer
 description: Colorizing black and white images using deep-learning (hosted on AWS EC2)
 img: /assets/img/image_colorizer.jpg
-redirect: http://13.94.189.74:8501/
+redirect: http://3.142.219.187:8501/
 importance: 2
 ---
 

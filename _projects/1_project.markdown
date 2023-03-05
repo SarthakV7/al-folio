@@ -3,7 +3,7 @@ layout: page
 title: AI for COVID-19 diagnosis
 description: COVID-19 prediction through cough audio using deep-learning (hosted on AWS EC2).
 img: /assets/img/cough.jpg
-redirect: https://covid19-cough-ai.xyz/
+redirect: http://covid19-cough-ai.com:8501/
 importance: 1
 ---
 
