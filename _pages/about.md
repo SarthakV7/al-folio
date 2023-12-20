@@ -15,9 +15,7 @@ social: true  # includes social icons at the bottom of the page.
 ---
 <br>
 
-I am a post-graduate student at [The University of Texas at Dallas](https://www.utdallas.edu/){:target="\_blank"}, specializing in Data Science for Business Analytics. Currently, I am serving as a Machine Learning Research Intern at [AppSteer](https://www.appsteer.ai/){:target="\_blank} in Texas since May 2023.
-
-In a pioneering role, I have led the development of prompt engineering for Large Language Models (LLMs), elevating their capabilities through Langchain and Huggingface technologies. Notably, I achieved rapid deployment by crafting and implementing a fully functional API within a six-week timeframe, significantly enhancing operational efficiency. Leveraging AWS and Azure, I implemented scalable solutions, reducing app development timelines to minutes.
+I am a post-graduate student at [The University of Texas at Dallas](https://www.utdallas.edu/){:target="\_blank"}, specializing in Data Science for Business Analytics. Currently, I am serving as a Machine Learning Research Intern at [AppSteer](https://www.appsteer.ai/){:target="\_blank} in Texas since May 2023, where, I led the development of prompt engineering for Large Language Models (LLMs), elevating their capabilities through Langchain and Huggingface technologies. Notably, I achieved rapid deployment by crafting and implementing a fully functional API within a six-week timeframe, significantly enhancing operational efficiency. Leveraging AWS and Azure, I implemented scalable solutions, reducing app development timelines to minutes.
 
 Previously, I contributed to a research project at [Stellenbosch University](http://www.sun.ac.za/english){:target="\_blank"} focused on diagnosing COVID-19 using deep learning algorithms applied to cough audio.
 
