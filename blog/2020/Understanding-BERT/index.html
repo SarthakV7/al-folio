@@ -72,7 +72,7 @@
     <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
     <div class="container">
       
-      <a class="navbar-brand title font-weight-lighter" href="/my_folio/">
+      <a class="navbar-brand title font-weight-lighter" href="https://sarthakv7.github.io/my_folio//">
        <span class="font-weight-bold">Sarthak</span>   Vajpayee
       </a>
       
@@ -117,6 +117,12 @@
           
           
           
+          
+          
+          
+          
+          
+          
           <li class="nav-item ">
               <a class="nav-link" href="/my_folio/projects/">
                 projects
@@ -136,6 +142,15 @@
           
           
           <li class="nav-item ">
+              <a class="nav-link" href="/my_folio/resume/">
+                resume
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
               <a class="nav-link" href="/my_folio/teaching/">
                 skills
                 
@@ -144,8 +159,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -176,20 +191,20 @@
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2058/1*i4CrNfG02A_sBFdU7MWbdg.gif" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2058/1*i4CrNfG02A_sBFdU7MWbdg.gif">
     </div>
 </div>
 
-<p><img src="" alt="" />
-<em>This is a 3 part series where we will be going through Transformers, BERT, and a hands-on Kaggle challenge — <a href="https://www.kaggle.com/c/google-quest-challenge/">Google QUEST Q&amp;A Labeling</a> to see Transformers in action (top 4.4% on the leaderboard).
+<p><img src="" alt="">
+<em>This is a 3 part series where we will be going through Transformers, BERT, and a hands-on Kaggle challenge — <a href="https://www.kaggle.com/c/google-quest-challenge/" target="_blank" rel="noopener noreferrer">Google QUEST Q&amp;A Labeling</a> to see Transformers in action (top 4.4% on the leaderboard).
 In this part (2/3) we will be looking at BERT (Bidirectional Encoder Representations from Transformers) *and how it *became state-of-the-art in various modern natural language processing tasks.
 Since the architecture of BERT is based on Transformers, you might want to check the internals of a Transformer which you can find in Part 1/3.</em></p>
 
 <p>We are aware of the fact that how transfer learning has revolutionized the field of computer vision in the past few years. Pretrained networks like VGG, YOLO, UNET, RESNET, and many more have shown a groundbreaking performance in different areas of computer vision.
 We have also seen a similar approach in the field of NLP like Word2Vector, GloVe but BERT takes it to a whole another level.</p>
 
-<p>BERT was a <a href="https://arxiv.org/pdf/1810.04805.pdf">paper</a> published by researchers at Google AI Language in late 2018 and since then it has become a state of the art in many NLP tasks. BERT takes a different approach, it considers all the words of the input sentence simultaneously and then uses an attention mechanism to develop a contextual meaning of the words.
-This approach works well for many NLP tasks as shown in the ELMo (Embeddings from Language Models) <a href="https://arxiv.org/pdf/1802.05365.pdf">paper</a> recently.</p>
+<p>BERT was a <a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank" rel="noopener noreferrer">paper</a> published by researchers at Google AI Language in late 2018 and since then it has become a state of the art in many NLP tasks. BERT takes a different approach, it considers all the words of the input sentence simultaneously and then uses an attention mechanism to develop a contextual meaning of the words.
+This approach works well for many NLP tasks as shown in the ELMo (Embeddings from Language Models) <a href="https://arxiv.org/pdf/1802.05365.pdf" target="_blank" rel="noopener noreferrer">paper</a> recently.</p>
 
 <p>In this blog, we will cover BERT by going through 4 sub-topics-</p>
 
@@ -235,29 +250,29 @@ The bi-directional part in BERT comes from the fact that it reads all the input 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2456/1*OUm4YbMOJHF-bL1m1cdndQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2456/1*OUm4YbMOJHF-bL1m1cdndQ.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 Like I said before, the encoder cells are similar to what we saw in the transformer. There are <strong>self-attention heads</strong> and then a <strong>feed-forward neural network.</strong> The attention heads and feed-forward neural networks are also parameters that define different kinds of BERT models.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3924/1*B-Kd1JHDms479Id2uCW22A.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3924/1*B-Kd1JHDms479Id2uCW22A.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 If we look at BERT base and BERT large which are the two BERT architectures, both BERT base, and BERT large take an input of 512-dimensions.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2520/1*6anJjc_T-fjphXD-xe4JNA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2520/1*6anJjc_T-fjphXD-xe4JNA.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <ul>
   <li>
     <p>BERT base — 12 layers (transformer blocks), 12 attention heads, 110 million parameters, and has an output size of 768-dimensions.</p>
@@ -269,12 +284,12 @@ If we look at BERT base and BERT large which are the two BERT architectures, bot
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2652/0*BX2O8E-NW5hYdqAr.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2652/0*BX2O8E-NW5hYdqAr.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
-On <a href="https://rajpurkar.github.io/SQuAD-explorer/">SQuAD v1.1</a>, BERT achieves a 93.16% F1 score, surpassing even the human-level score of 91.2%: BERT also improves the state-of-the-art by 7.6% absolute on the very challenging GLUE benchmark, a set of 9 diverse Natural Language Understanding (NLU) tasks.</p>
+<p><img src="" alt="">
+On <a href="https://rajpurkar.github.io/SQuAD-explorer/" target="_blank" rel="noopener noreferrer">SQuAD v1.1</a>, BERT achieves a 93.16% F1 score, surpassing even the human-level score of 91.2%: BERT also improves the state-of-the-art by 7.6% absolute on the very challenging GLUE benchmark, a set of 9 diverse Natural Language Understanding (NLU) tasks.</p>
 
 <p>*The paper calls encoder cells as transformer blocks.</p>
 <blockquote>
@@ -284,7 +299,8 @@ On <a href="https://rajpurkar.github.io/SQuAD-explorer/">SQuAD v1.1</a>, BERT ac
 <p>BERT is available as a pre-trained model. It was pre-trained on a large corpus of unlabelled text including the entire Wikipedia(that’s 2,500 million words) and book corpus (800 million words). Let’s see the 2 training methods that were used to train BERT.</p>
 
 <ul>
-  <li><strong>Masked Language Model (MLM):</strong>
+  <li>
+<strong>Masked Language Model (MLM):</strong>
 In this approach, the model is fed with a sentence such that 15% of the words in the sentence are masked.
 The challenge for BERT is to predict the masked words correctly given the context of unmasked words.
 Some points to keep in mind are:</li>
@@ -294,13 +310,14 @@ Some points to keep in mind are:</li>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2436/1*g44AA6blE3bn27vaWBjomQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2436/1*g44AA6blE3bn27vaWBjomQ.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <ul>
-  <li><strong>Next Sentence Prediction (NSP):</strong>
+  <li>
+<strong>Next Sentence Prediction (NSP):</strong>
 In this approach, the model is fed with 2 sentences.
 The challenge for BERT is to predict the order of the 2 sentences.
 For example, suppose the two sentences are:
@@ -325,11 +342,11 @@ and then convert into numerical tokens.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2524/1*Pe1d17zhxNyV6gu9OHjdkQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2524/1*Pe1d17zhxNyV6gu9OHjdkQ.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 BERT takes 3 types of input:</p>
 
 <ol>
@@ -362,11 +379,11 @@ We generate token_embeddings, segmentation_embeddings, and mask_tokens for the i
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3068/1*mk3nnec9aatuEZCBq2O24g.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3068/1*mk3nnec9aatuEZCBq2O24g.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 The catch with the above output is that it does not work as good for tasks where we need to focus more on the semantic meaning of the sentence like machine translation.
 For tasks like these, it is advised to use the pooled or averaged output of the hidden states of encoders. This is sometimes also referred to as <em>feature extraction</em>.</p>
 
@@ -374,14 +391,14 @@ For tasks like these, it is advised to use the pooled or averaged output of the 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3600/1*7EkcumT97b-VQzwZeaAKYg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3600/1*7EkcumT97b-VQzwZeaAKYg.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 Turns out that for most of the tasks, concatenation of the hidden states from the last four encoders seems to work the best.</p>
 
-<p>To know more about the input parameters and the values returned my BERT you can check out the official documentation here: <a href="https://huggingface.co/transformers/model_doc/bert.html">https://huggingface.co/transformers/model_doc/bert.html</a></p>
+<p>To know more about the input parameters and the values returned my BERT you can check out the official documentation here: <a href="https://huggingface.co/transformers/model_doc/bert.html" target="_blank" rel="noopener noreferrer">https://huggingface.co/transformers/model_doc/bert.html</a></p>
 <blockquote>
   <p><strong>Usability</strong></p>
 </blockquote>
@@ -390,11 +407,11 @@ Turns out that for most of the tasks, concatenation of the hidden states from th
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2772/1*VftUICOqy21xd6kRZY_k-w.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2772/1*VftUICOqy21xd6kRZY_k-w.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 (a). To classify a pair of sentences eg. a question-answer pair is relevant or not.</p>
 
 <p>(b). To classify a single sentence eg. detect if the input sentence is a spam or not.</p>
@@ -410,37 +427,37 @@ I would like to thank all the creators for creating the awesome content I referr
 
 <ul>
   <li>
-    <p><a href="https://www.appliedaicourse.com/">Applied AI Course.</a></p>
+    <p><a href="https://www.appliedaicourse.com/" target="_blank" rel="noopener noreferrer">Applied AI Course.</a></p>
   </li>
   <li>
-    <p><a href="https://arxiv.org/abs/1810.04805">https://arxiv.org/abs/1810.04805</a></p>
+    <p><a href="https://arxiv.org/abs/1810.04805" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1810.04805</a></p>
   </li>
   <li>
-    <p><a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270">https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270</a></p>
+    <p><a href="https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270" target="_blank" rel="noopener noreferrer">https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270</a></p>
   </li>
   <li>
-    <p><a href="http://jalammar.github.io/illustrated-bert/">http://jalammar.github.io/illustrated-bert/</a></p>
+    <p><a href="http://jalammar.github.io/illustrated-bert/" target="_blank" rel="noopener noreferrer">http://jalammar.github.io/illustrated-bert/</a></p>
   </li>
   <li>
-    <p><a href="https://www.youtube.com/watch?v=BhlOGGzC0Q0">https://www.youtube.com/watch?v=BhlOGGzC0Q0</a></p>
+    <p><a href="https://www.youtube.com/watch?v=BhlOGGzC0Q0" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=BhlOGGzC0Q0</a></p>
   </li>
   <li>
-    <p><a href="https://towardsdatascience.com/understanding-bert-is-it-a-game-changer-in-nlp-7cca943cf3ad">https://towardsdatascience.com/understanding-bert-is-it-a-game-changer-in-nlp-7cca943cf3ad</a></p>
+    <p><a href="https://towardsdatascience.com/understanding-bert-is-it-a-game-changer-in-nlp-7cca943cf3ad" target="_blank" rel="noopener noreferrer">https://towardsdatascience.com/understanding-bert-is-it-a-game-changer-in-nlp-7cca943cf3ad</a></p>
   </li>
 </ul>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <blockquote>
   <p><strong>Final note</strong></p>
 </blockquote>
 
 <p>Thank you for reading the blog. I hope it was useful for some of you aspiring to do projects or learn some new concepts in NLP.</p>
 
-<p>In <a href="https://towardsdatascience.com/transformers-state-of-the-art-natural-language-processing-1d84c4c7462b?source=friends_link&amp;sk=4ba3eb424ff59ce765c749819c6b5892">part 1/3</a> we covered how Transformers became state-of-the-art in various modern natural language processing tasks and their working.</p>
+<p>In <a href="https://towardsdatascience.com/transformers-state-of-the-art-natural-language-processing-1d84c4c7462b?source=friends_link&amp;sk=4ba3eb424ff59ce765c749819c6b5892" target="_blank" rel="noopener noreferrer">part 1/3</a> we covered how Transformers became state-of-the-art in various modern natural language processing tasks and their working.</p>
 
-<p>In <a href="https://towardsdatascience.com/hands-on-transformers-kaggle-google-quest-q-a-labeling-affd3dad7bcb?source=friends_link&amp;sk=159fd259d7ae346bb4cfa07dc5180938">part 3/3</a> we will go through a hands-on Kaggle challenge — <a href="https://www.kaggle.com/c/google-quest-challenge/">Google QUEST Q&amp;A Labeling</a> to see Transformers in action (top 4.4% on the leaderboard).</p>
+<p>In <a href="https://towardsdatascience.com/hands-on-transformers-kaggle-google-quest-q-a-labeling-affd3dad7bcb?source=friends_link&amp;sk=159fd259d7ae346bb4cfa07dc5180938" target="_blank" rel="noopener noreferrer">part 3/3</a> we will go through a hands-on Kaggle challenge — <a href="https://www.kaggle.com/c/google-quest-challenge/" target="_blank" rel="noopener noreferrer">Google QUEST Q&amp;A Labeling</a> to see Transformers in action (top 4.4% on the leaderboard).</p>
 
-<p>Find me on LinkedIn: <a href="http://www.linkedin.com/in/sarthak-vajpayee">www.linkedin.com/in/sarthak-vajpayee</a></p>
+<p>Find me on LinkedIn: <a href="http://www.linkedin.com/in/sarthak-vajpayee" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/sarthak-vajpayee</a></p>
 
 <p>Peace! ☮</p>
 
@@ -457,8 +474,8 @@ I would like to thank all the creators for creating the awesome content I referr
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2021 Sarthak  Vajpayee.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+    © Copyright 2023 Sarthak  Vajpayee.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
 
     
     

@@ -72,7 +72,7 @@
     <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
     <div class="container">
       
-      <a class="navbar-brand title font-weight-lighter" href="/my_folio/">
+      <a class="navbar-brand title font-weight-lighter" href="https://sarthakv7.github.io/my_folio//">
        <span class="font-weight-bold">Sarthak</span>   Vajpayee
       </a>
       
@@ -117,6 +117,12 @@
           
           
           
+          
+          
+          
+          
+          
+          
           <li class="nav-item ">
               <a class="nav-link" href="/my_folio/projects/">
                 projects
@@ -136,6 +142,15 @@
           
           
           <li class="nav-item ">
+              <a class="nav-link" href="/my_folio/resume/">
+                resume
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
               <a class="nav-link" href="/my_folio/teaching/">
                 skills
                 
@@ -144,8 +159,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -176,11 +191,11 @@
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2400/1*TKm-NpEhRkmGLIQtx5IgBg.gif" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2400/1*TKm-NpEhRkmGLIQtx5IgBg.gif">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 In this tutorial, I will show how easy it is to code your own sudoku solver using deep learning and some image processing.</p>
 
 <h3 id="prerequisites">Prerequisites:</h3>
@@ -208,42 +223,54 @@ In this tutorial, I will show how easy it is to code your own sudoku solver usin
 
 <p><strong><em>Let’s begin by creating a workspace.</em></strong></p>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <blockquote>
   <p><strong>Creating a workspace.</strong></p>
 </blockquote>
 
-<p>I recommend making a conda environment because it makes project management much easier. Please follow the instructions in this <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/">link</a> for installing mini-conda. Once installed open cmd/terminal and create an environment using-</p>
+<p>I recommend making a conda environment because it makes project management much easier. Please follow the instructions in this <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/" target="_blank" rel="noopener noreferrer">link</a> for installing mini-conda. Once installed open cmd/terminal and create an environment using-</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-</pre></td><td class="code"><pre>    conda create <span class="nt">-n</span> <span class="s1">'name_of_the_environment'</span> <span class="nv">python</span><span class="o">=</span>3.6 
-</pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>    conda create <span class="nt">-n</span> <span class="s1">'name_of_the_environment'</span> <span class="nv">python</span><span class="o">=</span>3.6 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>Now let’s activate the environment:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-</pre></td><td class="code"><pre>    conda activate <span class="s1">'name_of_the_environment'</span> 
-</pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>    conda activate <span class="s1">'name_of_the_environment'</span> 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>This should set us inside our virtual environment. Time to install some libraries-</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-</pre></td><td class="code"><pre>    <span class="c"># installing OpenCV</span>
+</pre></td>
+<td class="code"><pre>    <span class="c"># installing OpenCV</span>
     pip <span class="nb">install </span>opencv-python<span class="o">==</span>4.1.0# Installing Keras
     pip <span class="nb">install </span>keras# Installing Jupyter
     pip <span class="nb">install </span>jupyter#Installing Scikit-Learn
     pip <span class="nb">install </span>scikit-learn 
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>Finally, let’s open jupyter notebook using the below command and start coding.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-</pre></td><td class="code"><pre>    jupyter notebook 
-</pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>    jupyter notebook 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <h3 id="approach-">Approach-</h3>
 
@@ -258,7 +285,7 @@ In this tutorial, I will show how easy it is to code your own sudoku solver usin
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*VpVKSlgn5RBo-vmbEIlakg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*VpVKSlgn5RBo-vmbEIlakg.png">
     </div>
 </div>
 
@@ -266,12 +293,13 @@ In this tutorial, I will show how easy it is to code your own sudoku solver usin
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2092/1*ZRxJNwJV2QiP8ACbGxPAhQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2092/1*ZRxJNwJV2QiP8ACbGxPAhQ.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
-<h5 id="steps-"><strong>Steps</strong>-</h5>
+<p><img src="" alt=""></p>
+<h5 id="steps-">
+<strong>Steps</strong>-</h5>
 
 <p><strong>1. Converting the input image to a binary image</strong>: This step involves converting the input image to a greyscale image, applying gaussian blur to the grey-scale image, followed by thresholding, bitwise_not and dilating the image.</p>
 
@@ -279,36 +307,37 @@ In this tutorial, I will show how easy it is to code your own sudoku solver usin
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*HdStwcs07a0a5EuVTPx5vw.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*HdStwcs07a0a5EuVTPx5vw.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
-<p><strong>Gaussian Blur:</strong> An image blurring technique in which the image is convolved with a <a href="https://en.wikipedia.org/wiki/Gaussian_filter">Gaussian kernel</a>. I’ll be using it to smoothen the input image by reducing noise.</p>
+<p><strong>Gaussian Blur:</strong> An image blurring technique in which the image is convolved with a <a href="https://en.wikipedia.org/wiki/Gaussian_filter" target="_blank" rel="noopener noreferrer">Gaussian kernel</a>. I’ll be using it to smoothen the input image by reducing noise.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*EdbST8knhBIZrx70F9PZsg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*EdbST8knhBIZrx70F9PZsg.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <p><strong>Thresholding:</strong> In grayscaled images, each pixel has a value between 0–255, to convert such an image to a binary image we apply thresholding. To do this, we choose a threshold value between 0–255 and check each pixel’s value in the grayscale image. If the value is less than the threshold, it is given a value of 0 else 1.</p>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 <strong><em>In binary images, the pixels have just 2 values (0: Black, 1:White) and hence, it makes edge detection much easier.</em></strong></p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*AK_0UaE534NT_VwSW70urw.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*AK_0UaE534NT_VwSW70urw.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -332,51 +361,55 @@ In this tutorial, I will show how easy it is to code your own sudoku solver usin
 22
 23
 24
-</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">pre_process_image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">skip_dilate</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
-     <span class="s">"""Uses a blurring function, adaptive thresholding and dilation to expose the main features of an image."""</span>
+</pre></td>
+<td class="code"><pre> <span class="k">def</span> <span class="nf">pre_process_image</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">skip_dilate</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+     <span class="sh">"""</span><span class="s">Uses a blurring function, adaptive thresholding and dilation to expose the main features of an image.</span><span class="sh">"""</span>
 
      <span class="c1"># Gaussian blur with a kernal size (height, width) of 9.
 </span>     <span class="c1"># Note that kernal sizes must be positive and odd and the kernel must be square.
-</span>     <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">copy</span><span class="p">(),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+</span>     <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nc">GaussianBlur</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
 
      <span class="c1"># Adaptive threshold using 11 nearest neighbour pixels
-</span>     <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">adaptiveThreshold</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">ADAPTIVE_THRESH_GAUSSIAN_C</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span>     <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">adaptiveThreshold</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">ADAPTIVE_THRESH_GAUSSIAN_C</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
      <span class="c1"># Invert colours, so gridlines have non-zero pixel values.
 </span>     <span class="c1"># Necessary to dilate the image, otherwise will look like erosion instead.
-</span>     <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">bitwise_not</span><span class="p">(</span><span class="n">proc</span><span class="p">)</span>
+</span>     <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">bitwise_not</span><span class="p">(</span><span class="n">proc</span><span class="p">)</span>
 
      <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_dilate</span><span class="p">:</span>
          <span class="c1"># Dilate the image to increase the size of the grid lines.
-</span>         <span class="n">kernel</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]],</span> <span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span>
-         <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">dilate</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>
+</span>         <span class="n">kernel</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]],</span> <span class="n">np</span><span class="p">.</span><span class="n">uint8</span><span class="p">)</span>
+         <span class="n">proc</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">dilate</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">kernel</span><span class="p">)</span>
 
-     <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">)</span>
-     <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'pre_process_image'</span><span class="p">)</span>
-     <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+     <span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">proc</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="sh">'</span><span class="s">gray</span><span class="sh">'</span><span class="p">)</span>
+     <span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">'</span><span class="s">pre_process_image</span><span class="sh">'</span><span class="p">)</span>
+     <span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
      <span class="k">return</span> <span class="n">proc</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <p><strong>2. Detecting the largest polygon in the image:</strong> This step involves finding the contours from the previous image and selecting the largest contour (corresponds to the largest grid). Now from the largest contour, selecting the extreme most points and that would be the 4 corners.
 The function cv2.findContours returns all the contours it finds in the image.
 After sorting the returned contours from the image by area, the largest contour can easily be selected. And once we have the largest polygon, we can easily select the 4 corners (displayed as the 4 green points in the third image in figure 1).</p>
 
 <ul>
-  <li><strong>Contour detection:</strong> Contours can be explained simply as a curve joining all the continuous points (along the boundary), having the same color or intensity.</li>
+  <li>
+<strong>Contour detection:</strong> Contours can be explained simply as a curve joining all the continuous points (along the boundary), having the same color or intensity.</li>
 </ul>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*7xbCSgN25_qq5irJ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*7xbCSgN25_qq5irJ.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -398,10 +431,11 @@ After sorting the returned contours from the image by area, the largest contour 
 20
 21
 22
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">find_corners_of_largest_polygon</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
-    <span class="s">"""Finds the 4 extreme corners of the largest contour in the image."""</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">cv2</span><span class="p">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>  <span class="c1"># Find contours
-</span>    <span class="n">contours</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">cv2</span><span class="p">.</span><span class="n">contourArea</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># Sort by area, descending
+</pre></td>
+<td class="code"><pre><span class="k">def</span> <span class="nf">find_corners_of_largest_polygon</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Finds the 4 extreme corners of the largest contour in the image.</span><span class="sh">"""</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">contours</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">findContours</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span> <span class="n">cv2</span><span class="p">.</span><span class="n">RETR_EXTERNAL</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>  <span class="c1"># Find contours
+</span>    <span class="n">contours</span> <span class="o">=</span> <span class="nf">sorted</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">cv2</span><span class="p">.</span><span class="n">contourArea</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># Sort by area, descending
 </span>    <span class="n">polygon</span> <span class="o">=</span> <span class="n">contours</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># Largest image
 </span>
     <span class="c1"># Use of `operator.itemgetter` with `max` and `min` allows us to get the index of the point
@@ -411,25 +445,26 @@ After sorting the returned contours from the image by area, the largest contour 
 </span>    <span class="c1"># Top-left has point smallest (x + y) value
 </span>    <span class="c1"># Bottom-left point has smallest (x - y) value
 </span>    <span class="c1"># Top-right point has largest (x - y) value
-</span>    <span class="n">bottom_right</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">top_left</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">bottom_left</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">top_right</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</span>    <span class="n">bottom_right</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="nf">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="nf">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">top_left</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="nf">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="nf">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">bottom_left</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="nf">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="nf">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">top_right</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="nf">enumerate</span><span class="p">([</span><span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pt</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">polygon</span><span class="p">]),</span> <span class="n">key</span><span class="o">=</span><span class="n">operator</span><span class="p">.</span><span class="nf">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 
     <span class="c1"># Return an array of all 4 points using the indices
 </span>    <span class="c1"># Each point is in its own array of one coordinate
 </span>    <span class="k">return</span> <span class="p">[</span><span class="n">polygon</span><span class="p">[</span><span class="n">top_left</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">polygon</span><span class="p">[</span><span class="n">top_right</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">polygon</span><span class="p">[</span><span class="n">bottom_right</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">polygon</span><span class="p">[</span><span class="n">bottom_left</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <p><strong>3. Cropping and warping the detected polygon:</strong>
 The approach is simple since we have the coordinates of the 4 corners, we can use this to crop and wrap the original image resulting in the final image in figure 1.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*SyK4ZRyqdM2gYDLoANJOZA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*SyK4ZRyqdM2gYDLoANJOZA.png">
     </div>
 </div>
 
@@ -439,19 +474,20 @@ transformation matrix. Now transformation matrix is a 3x3 matrix that helps us c
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*vtyYf7q3UDKGpdpaipNppA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*vtyYf7q3UDKGpdpaipNppA.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*cydEJHPYQMjG3yZZgsN4ew.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*cydEJHPYQMjG3yZZgsN4ew.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -481,68 +517,74 @@ transformation matrix. Now transformation matrix is a 3x3 matrix that helps us c
 28
 29
 30
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">crop_and_warp</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">crop_rect</span><span class="p">):</span>
-    <span class="s">"""Crops and warps a rectangular section from an image into a square of similar size."""</span>
+</pre></td>
+<td class="code"><pre><span class="k">def</span> <span class="nf">crop_and_warp</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">crop_rect</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Crops and warps a rectangular section from an image into a square of similar size.</span><span class="sh">"""</span>
 
     <span class="c1"># Rectangle described by top left, top right, bottom right and bottom left points
 </span>    <span class="n">top_left</span><span class="p">,</span> <span class="n">top_right</span><span class="p">,</span> <span class="n">bottom_right</span><span class="p">,</span> <span class="n">bottom_left</span> <span class="o">=</span> <span class="n">crop_rect</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">crop_rect</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">crop_rect</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">crop_rect</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
     <span class="c1"># Explicitly set the data type to float32 or `getPerspectiveTransform` will throw an error
-</span>    <span class="n">src</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">top_left</span><span class="p">,</span> <span class="n">top_right</span><span class="p">,</span> <span class="n">bottom_right</span><span class="p">,</span> <span class="n">bottom_left</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">)</span>
+</span>    <span class="n">src</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="n">top_left</span><span class="p">,</span> <span class="n">top_right</span><span class="p">,</span> <span class="n">bottom_right</span><span class="p">,</span> <span class="n">bottom_left</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="sh">'</span><span class="s">float32</span><span class="sh">'</span><span class="p">)</span>
 
     <span class="c1"># Get the longest side in the rectangle
-</span>    <span class="n">side</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span>
-        <span class="n">distance_between</span><span class="p">(</span><span class="n">bottom_right</span><span class="p">,</span> <span class="n">top_right</span><span class="p">),</span>
-        <span class="n">distance_between</span><span class="p">(</span><span class="n">top_left</span><span class="p">,</span> <span class="n">bottom_left</span><span class="p">),</span>
-        <span class="n">distance_between</span><span class="p">(</span><span class="n">bottom_right</span><span class="p">,</span> <span class="n">bottom_left</span><span class="p">),</span>
-        <span class="n">distance_between</span><span class="p">(</span><span class="n">top_left</span><span class="p">,</span> <span class="n">top_right</span><span class="p">)</span>
+</span>    <span class="n">side</span> <span class="o">=</span> <span class="nf">max</span><span class="p">([</span>
+        <span class="nf">distance_between</span><span class="p">(</span><span class="n">bottom_right</span><span class="p">,</span> <span class="n">top_right</span><span class="p">),</span>
+        <span class="nf">distance_between</span><span class="p">(</span><span class="n">top_left</span><span class="p">,</span> <span class="n">bottom_left</span><span class="p">),</span>
+        <span class="nf">distance_between</span><span class="p">(</span><span class="n">bottom_right</span><span class="p">,</span> <span class="n">bottom_left</span><span class="p">),</span>
+        <span class="nf">distance_between</span><span class="p">(</span><span class="n">top_left</span><span class="p">,</span> <span class="n">top_right</span><span class="p">)</span>
         <span class="p">])</span>
 
     <span class="c1"># Describe a square with side of the calculated length, this is the new perspective we want to warp to
-</span>    <span class="n">dst</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="s">'float32'</span><span class="p">)</span>
+</span>    <span class="n">dst</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">side</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="sh">'</span><span class="s">float32</span><span class="sh">'</span><span class="p">)</span>
 
     <span class="c1"># Gets the transformation matrix for skewing the image to fit a square by comparing the 4 before and after points
-</span>    <span class="n">m</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">getPerspectiveTransform</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
+</span>    <span class="n">m</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">getPerspectiveTransform</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">)</span>
 
     <span class="c1"># Performs the transformation on the original image
-</span>    <span class="n">warp</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">warpPerspective</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">side</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">side</span><span class="p">)))</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">warp</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'gray'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'warp_image'</span><span class="p">)</span>
-    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</span>    <span class="n">warp</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">warpPerspective</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">side</span><span class="p">),</span> <span class="nf">int</span><span class="p">(</span><span class="n">side</span><span class="p">)))</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">warp</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="sh">'</span><span class="s">gray</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">'</span><span class="s">warp_image</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">warp</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <h3 id="part-2-extracting-numbers-from-sudoku-">Part 2 (Extracting numbers from sudoku)-</h3>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*SqNs8ziy_z1d2ZUVmth_jQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*SqNs8ziy_z1d2ZUVmth_jQ.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2564/1*B3oZp0a54NBoOk6MrUVhnQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2564/1*B3oZp0a54NBoOk6MrUVhnQ.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="step-1-">Step 1-</h5>
 
 <ol>
-  <li><strong>Eliminating noise from the binary image:</strong> We’ll use a gaussian blur to remove the noise from the warped image resulting in a better image.</li>
-  <li><strong>Extracting the smaller grids:</strong> Since we already know that a sudoku grid has 81 similar dimensional cells (9 rows and 9 columns). We can simply iterate over the row length and column length of the image, check for points every 1/9th of the length of row/column distance apart and stored the set of pixels that were in between in an array. Some of the sample pixels extracted are shown in the last image in figure 2.</li>
+  <li>
+<strong>Eliminating noise from the binary image:</strong> We’ll use a gaussian blur to remove the noise from the warped image resulting in a better image.</li>
+  <li>
+<strong>Extracting the smaller grids:</strong> Since we already know that a sudoku grid has 81 similar dimensional cells (9 rows and 9 columns). We can simply iterate over the row length and column length of the image, check for points every 1/9th of the length of row/column distance apart and stored the set of pixels that were in between in an array. Some of the sample pixels extracted are shown in the last image in figure 2.</li>
 </ol>
 
 <h5 id="step-2-">Step 2-</h5>
 
 <ol>
   <li>Since we now have the individual grids that contain the digit information, we need to build a neural network that is capable of recognize the digits.</li>
-  <li><strong>Data:</strong> We should expect 10 types of characters, 1–9 and null i.e. blank space that is needed to be filled. I’ve created the data using the above-mentioned grid extraction method from different sudoku images. 30 samples for each digit.</li>
-  <li><strong>CNN:</strong> The convolutional neural network that I’ve made is 6 layers deep (4 hidden layers) sequential model.
+  <li>
+<strong>Data:</strong> We should expect 10 types of characters, 1–9 and null i.e. blank space that is needed to be filled. I’ve created the data using the above-mentioned grid extraction method from different sudoku images. 30 samples for each digit.</li>
+  <li>
+<strong>CNN:</strong> The convolutional neural network that I’ve made is 6 layers deep (4 hidden layers) sequential model.
 To keep the model simple, we’ll start by creating a sequential object.</li>
 </ol>
 
@@ -552,17 +594,17 @@ To keep the model simple, we’ll start by creating a sequential object.</li>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*pl1n5jXISUPldfxW.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*pl1n5jXISUPldfxW.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*Y060k1TEJsWdIKm1.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*Y060k1TEJsWdIKm1.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <ul>
   <li>Next, we’ll be adding a max-pooling layer with a window size of (2,2).
 <strong>Max pooling</strong> is a sample-based discretization process. The objective is to down-sample an input representation (image, hidden-<strong>layer</strong> output matrix, etc.), reducing its dimensionality and allowing for assumptions to be made about features contained in the sub-regions binned.</li>
@@ -570,17 +612,17 @@ To keep the model simple, we’ll start by creating a sequential object.</li>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*YZdtu5_gSytx9x0H" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*YZdtu5_gSytx9x0H">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2800/0*3DmQcQvfa-RXuXfZ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2800/0*3DmQcQvfa-RXuXfZ.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <ul>
   <li>
     <p>Now, we will be adding some dropout rate to take care of overfitting.
@@ -593,22 +635,23 @@ To keep the model simple, we’ll start by creating a sequential object.</li>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*Bw6THVBMaOGx0CKP" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*Bw6THVBMaOGx0CKP">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*bHOWX-n-1tgSHsIK.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*bHOWX-n-1tgSHsIK.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <ul>
   <li>Finally, we will be adding 2 dense layers, one with the dimensionality of the output space as 128, activation function=’relu’ and other, our final layer with 10 output classes for categorizing the 10 digits (0–9) and activation function=’ softmax’.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -665,66 +708,68 @@ To keep the model simple, we’ll start by creating a sequential object.</li>
 55
 56
 57
-</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dropout</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Flatten</span>
-<span class="kn">from</span> <span class="nn">keras.layers.convolutional</span> <span class="kn">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="kn">from</span> <span class="nn">keras.utils</span> <span class="kn">import</span> <span class="n">np_utils</span>
+</pre></td>
+<td class="code"><pre><span class="kn">from</span> <span class="n">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="n">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+<span class="kn">from</span> <span class="n">keras.layers</span> <span class="kn">import</span> <span class="n">Dropout</span>
+<span class="kn">from</span> <span class="n">keras.layers</span> <span class="kn">import</span> <span class="n">Flatten</span>
+<span class="kn">from</span> <span class="n">keras.layers.convolutional</span> <span class="kn">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span>
+<span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="n">keras.utils</span> <span class="kn">import</span> <span class="n">np_utils</span>
 
 <span class="c1"># load dataset
-</span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'image_data.csv'</span><span class="p">)</span>
+</span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="sh">'</span><span class="s">image_data.csv</span><span class="sh">'</span><span class="p">)</span>
 
 <span class="c1"># split into input and output variables
 </span><span class="n">X</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'y'</span><span class="p">]</span>
-<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="s">'y'</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="sh">'</span><span class="s">y</span><span class="sh">'</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">data</span><span class="p">[</span><span class="sh">'</span><span class="s">y</span><span class="sh">'</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
     <span class="n">flat_pixels</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">flat_pixels</span><span class="p">,</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">))</span>
-    <span class="n">X</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="n">flat_pixels</span><span class="p">,</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">))</span>
+    <span class="n">X</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 
-<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
 
 <span class="c1"># split the data into training (50%) and testing (50%)
-</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">y_test</span> <span class="o">=</span> <span class="n">Y_test</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">)</span> <span class="o">=</span> <span class="nf">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.30</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">Y_test</span><span class="p">.</span><span class="nf">copy</span><span class="p">()</span>
 
 <span class="c1"># one hot encode outputs
-</span><span class="n">Y_train</span> <span class="o">=</span> <span class="n">np_utils</span><span class="p">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">Y_train</span><span class="p">)</span>
-<span class="n">Y_test</span> <span class="o">=</span> <span class="n">np_utils</span><span class="p">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">Y_test</span><span class="p">)</span>
+</span><span class="n">Y_train</span> <span class="o">=</span> <span class="n">np_utils</span><span class="p">.</span><span class="nf">to_categorical</span><span class="p">(</span><span class="n">Y_train</span><span class="p">)</span>
+<span class="n">Y_test</span> <span class="o">=</span> <span class="n">np_utils</span><span class="p">.</span><span class="nf">to_categorical</span><span class="p">(</span><span class="n">Y_test</span><span class="p">)</span>
 
 <span class="c1">#reshaping data
-</span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">X_test</span>  <span class="o">=</span> <span class="n">X_test</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span><span class="n">X_train</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X_test</span>  <span class="o">=</span> <span class="n">X_test</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">num_classes</span> <span class="o">=</span> <span class="mi">11</span>
 
 <span class="c1"># print('done!!!')
 </span>
 <span class="c1"># create model
-</span><span class="n">model_</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model_</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">))</span>
-<span class="n">model_</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model_</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
-<span class="n">model_</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
-<span class="n">model_</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">))</span>
-<span class="n">model_</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'softmax'</span><span class="p">))</span>
+</span><span class="n">model_</span> <span class="o">=</span> <span class="nc">Sequential</span><span class="p">()</span>
+<span class="n">model_</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">relu</span><span class="sh">'</span><span class="p">))</span>
+<span class="n">model_</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="n">model_</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="n">model_</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Flatten</span><span class="p">())</span>
+<span class="n">model_</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">relu</span><span class="sh">'</span><span class="p">))</span>
+<span class="n">model_</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">softmax</span><span class="sh">'</span><span class="p">))</span>
 
 
 <span class="c1"># Compile model
-</span><span class="n">model_</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">'categorical_crossentropy'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s">'adam'</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
-<span class="n">model_</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="n">model_</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="sh">'</span><span class="s">categorical_crossentropy</span><span class="sh">'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="sh">'</span><span class="s">adam</span><span class="sh">'</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="sh">'</span><span class="s">accuracy</span><span class="sh">'</span><span class="p">])</span>
+<span class="n">model_</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">Y_test</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Final evaluation of the model
-</span><span class="n">scores</span> <span class="o">=</span> <span class="n">model_</span><span class="p">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"CNN Error: %.2f%%"</span> <span class="o">%</span> <span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</span><span class="n">scores</span> <span class="o">=</span> <span class="n">model_</span><span class="p">.</span><span class="nf">evaluate</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">CNN Error: %.2f%%</span><span class="sh">"</span> <span class="o">%</span> <span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="training-and-testing"><strong>Training and Testing.</strong></h5>
 
 <p>The dataset I have created is small but works well. It contains 30 sample images of size 28x28 for each of the digits (0–9). Here 0 corresponds to the blank space in sudoku.
@@ -735,28 +780,28 @@ Now we need to split the data into 2 sets-</p>
 The train test split is 70–30 i.e 30% of points are selected from the whole dataset randomly and assigned as the test set. The remaining 70% points are assigned as the train set.</li>
 </ol>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="results-">Results-</h5>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*fy-5w07mG15wHi152thBjg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*fy-5w07mG15wHi152thBjg.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*jdX7m-nBymIRpAmKr6RpyQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*jdX7m-nBymIRpAmKr6RpyQ.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*rG65lP_s852EdeSjw_91pA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*rG65lP_s852EdeSjw_91pA.png">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 These are the prediction results from some of the sample grids that I extracted and as we can see the predictions are pretty accurate, we can proceed to the next step:
 Detecting all the characters and storing them in an array of dimensions 9x9.</p>
 
@@ -767,16 +812,16 @@ Detecting all the characters and storing them in an array of dimensions 9x9.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*6unKN-WMQVMWHX2A7yreug.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*6unKN-WMQVMWHX2A7yreug.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h3 id="part-3-solving-the-sudoku-using-backtracking">Part 3 (Solving the Sudoku using backtracking):</h3>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*Agl6KYLlG82XsYeUoId9fQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*Agl6KYLlG82XsYeUoId9fQ.png">
     </div>
 </div>
 
@@ -789,11 +834,11 @@ I found backtracking very efficient at this so let’s talk more about it.</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*1aj4-PcXpXs_llBbxanWIg.gif" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*1aj4-PcXpXs_llBbxanWIg.gif">
     </div>
 </div>
 
-<p><img src="" alt="" />
+<p><img src="" alt="">
 Let’s understand how backtracking works through an example using a 3x3 sudoku. Suppose we’ve to solve the grid given the constraints-</p>
 
 <ol>
@@ -807,41 +852,41 @@ Let’s understand how backtracking works through an example using a 3x3 sudoku.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*nViO2YFMkaMlLPpMHqn0-A.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*nViO2YFMkaMlLPpMHqn0-A.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*vnC_w6fLl4vnfaEu9d0jwA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*vnC_w6fLl4vnfaEu9d0jwA.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*jMmLY1d0qKqFQ0D3Vunn7Q.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*jMmLY1d0qKqFQ0D3Vunn7Q.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*2nqeTzxTmqUtRNOtlMC0rA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*2nqeTzxTmqUtRNOtlMC0rA.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*AIv6X-A-Mdc__I3jKeqykg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*AIv6X-A-Mdc__I3jKeqykg.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*5j0PCkrqFAjj7hKpkF4gfw.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*5j0PCkrqFAjj7hKpkF4gfw.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <p><strong>1.</strong> We need to fill 5 spaces, let’s start by iterating over the blank spaces from left to right and top to bottom.</p>
 
@@ -858,7 +903,8 @@ Seems 1 is good here as it is unique in its row and column.</p>
 
 <p>Now that we’ve understood how backtracking works, let’s make a function using the constraints used while solving a 9x9 sudoku and test it on the array we obtained from the previous step.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -922,26 +968,27 @@ Seems 1 is good here as it is unique in its row and column.</p>
 62
 63
 64
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">find_empty_grid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="c1"># checks for empty spaces '0'.
-</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+</pre></td>
+<td class="code"><pre><span class="k">def</span> <span class="nf">find_empty_grid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="c1"># checks for empty spaces '0'.
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
             <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">return</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>  <span class="c1">#return row, col
+                <span class="nf">return </span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>  <span class="c1">#return row, col
 </span>
     <span class="k">return</span> <span class="bp">None</span>
 
 <span class="k">def</span> <span class="nf">solve_array</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="n">find</span> <span class="o">=</span> <span class="n">find_empty_grid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">#find the empty spaces
+    <span class="n">find</span> <span class="o">=</span> <span class="nf">find_empty_grid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1">#find the empty spaces
 </span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">find</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">True</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">row</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span> <span class="n">find</span>
 
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">valid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)):</span> <span class="c1">#check the constraints
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nf">valid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)):</span> <span class="c1">#check the constraints
 </span>            <span class="n">x</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
 
-            <span class="k">if</span> <span class="n">solve_array</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nf">solve_array</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
                 <span class="k">return</span> <span class="bp">True</span>
 
             <span class="n">x</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
@@ -950,12 +997,12 @@ Seems 1 is good here as it is unique in its row and column.</p>
 
 <span class="k">def</span> <span class="nf">valid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span> <span class="c1">#this function checks the constraints
 </span>    <span class="c1"># Check row
-</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
         <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">num</span> <span class="ow">and</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">i</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">False</span>
 
     <span class="c1"># Check column
-</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">==</span> <span class="n">num</span> <span class="ow">and</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">i</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">False</span>
 
@@ -963,38 +1010,39 @@ Seems 1 is good here as it is unique in its row and column.</p>
 </span>    <span class="n">box_x</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">//</span> <span class="mi">3</span>
     <span class="n">box_y</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">//</span> <span class="mi">3</span>
 
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">box_y</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="n">box_y</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">box_x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="n">box_x</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">box_y</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="n">box_y</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">box_x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="n">box_x</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">num</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="o">!=</span> <span class="n">pos</span><span class="p">:</span>
                 <span class="k">return</span> <span class="bp">False</span>
 
     <span class="k">return</span> <span class="bp">True</span>
 
 <span class="k">def</span> <span class="nf">print_board</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="c1">#this function is for printing the array with a better look
-</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">"- - - - - - - - - - - - - "</span><span class="p">)</span>
+            <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">- - - - - - - - - - - - - </span><span class="sh">"</span><span class="p">)</span>
 
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
             <span class="k">if</span> <span class="n">j</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">print</span><span class="p">(</span><span class="s">" | "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s"> | </span><span class="sh">"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="sh">""</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
-                <span class="n">k</span> <span class="o">=</span> <span class="s">'.'</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-                <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="sh">'</span><span class="s">.</span><span class="sh">'</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="nf">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+                <span class="nf">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">k</span> <span class="o">=</span> <span class="s">'.'</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-                <span class="k">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="s">" "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="sh">'</span><span class="s">.</span><span class="sh">'</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span> <span class="k">else</span> <span class="nf">str</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+                <span class="nf">print</span><span class="p">(</span><span class="n">k</span> <span class="o">+</span> <span class="sh">"</span><span class="s"> </span><span class="sh">"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="sh">""</span><span class="p">)</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*tQ8j2E6zIw4iEPKF0ThtLQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*tQ8j2E6zIw4iEPKF0ThtLQ.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <blockquote>
   <p><strong>Final comment</strong></p>
@@ -1004,11 +1052,11 @@ Seems 1 is good here as it is unique in its row and column.</p>
 
 <p>And if you have any doubts regarding this project, please leave a comment in the response section.</p>
 
-<p>Kaggle notebook link: <a href="https://www.kaggle.com/sarthakvajpayee/simple-ai-sudoku-solver?scriptVersionId=40346804">https://www.kaggle.com/sarthakvajpayee/simple-ai-sudoku-solver?scriptVersionId=40346804</a></p>
+<p>Kaggle notebook link: <a href="https://www.kaggle.com/sarthakvajpayee/simple-ai-sudoku-solver?scriptVersionId=40346804" target="_blank" rel="noopener noreferrer">https://www.kaggle.com/sarthakvajpayee/simple-ai-sudoku-solver?scriptVersionId=40346804</a></p>
 
-<p>Github repo link: <a href="https://github.com/SarthakV7/ai_sudoku_solver">https://github.com/SarthakV7/ai_sudoku_solver</a></p>
+<p>Github repo link: <a href="https://github.com/SarthakV7/ai_sudoku_solver" target="_blank" rel="noopener noreferrer">https://github.com/SarthakV7/ai_sudoku_solver</a></p>
 
-<p>Find me on LinkedIn: <a href="http://www.linkedin.com/in/sarthak-vajpayee">www.linkedin.com/in/sarthak-vajpayee</a></p>
+<p>Find me on LinkedIn: <a href="http://www.linkedin.com/in/sarthak-vajpayee" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/sarthak-vajpayee</a></p>
 
   </article>
 
@@ -1023,8 +1071,8 @@ Seems 1 is good here as it is unique in its row and column.</p>
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2021 Sarthak  Vajpayee.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+    © Copyright 2023 Sarthak  Vajpayee.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
 
     
     

@@ -72,7 +72,7 @@
     <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
     <div class="container">
       
-      <a class="navbar-brand title font-weight-lighter" href="/my_folio/">
+      <a class="navbar-brand title font-weight-lighter" href="https://sarthakv7.github.io/my_folio//">
        <span class="font-weight-bold">Sarthak</span>   Vajpayee
       </a>
       
@@ -117,6 +117,12 @@
           
           
           
+          
+          
+          
+          
+          
+          
           <li class="nav-item ">
               <a class="nav-link" href="/my_folio/projects/">
                 projects
@@ -136,6 +142,15 @@
           
           
           <li class="nav-item ">
+              <a class="nav-link" href="/my_folio/resume/">
+                resume
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
               <a class="nav-link" href="/my_folio/teaching/">
                 skills
                 
@@ -144,8 +159,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -174,21 +189,21 @@
   <article class="post-content">
     <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3200/1*Fh9BMaEwSRsCFOFvQnC2ww.jpeg" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3200/1*Fh9BMaEwSRsCFOFvQnC2ww.jpeg">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <h4 id="inspiration"><strong>Inspiration:</strong></h4>
 <p>The guy who hit my car and got away with it!</p>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <h4 id="backstory"><strong>Backstory:</strong></h4>
 <p>After a memorable evening with friends as we were about to leave for our home there was something that made that evening even more memorable, a huge dent in my car’s front bumper, seemed it was hit by another vehicle, but who to blame? There was no one around who would have witnessed that. And what could I do about it?  I’ll tell you exactly what I did about it. I decided to use my machine learning and data skills and make an AI-based Indian License plate detector that was capable enough to keep a watch on a vehicle by detecting the number plates of vehicles around it and in this blog I’ll be taking you guys through my journey of how I did it! First things first: There is always a scope of improvising, so if you come up with some better ideas or doubts regarding this project please do use the response section below.</p>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <h3 id="approach">Approach:</h3>
 
@@ -217,7 +232,7 @@ Now comes the fun part! Since we have all the characters, we need to pass the ch
   </li>
 </ul>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <h3 id="prerequisites">Prerequisites:</h3>
 
@@ -232,7 +247,7 @@ Now comes the fun part! Since we have all the characters, we need to pass the ch
     <p><strong>IDE:</strong> I’ll be using Jupyter here.</p>
   </li>
   <li>
-    <p><strong>Haar cascade</strong>: It is a machine learning object detection algorithm used to identify objects in an image or video and based on the concept of <strong>​​</strong> features proposed by Paul Viola and Michael Jones in their paper “Rapid Object Detection using a Boosted Cascade of Simple Features” in 2001. <a href="https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework">More info</a></p>
+    <p><strong>Haar cascade</strong>: It is a machine learning object detection algorithm used to identify objects in an image or video and based on the concept of <strong>​​</strong> features proposed by Paul Viola and Michael Jones in their paper “Rapid Object Detection using a Boosted Cascade of Simple Features” in 2001. <a href="https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework" target="_blank" rel="noopener noreferrer">More info</a></p>
   </li>
   <li>
     <p><strong>Keras</strong>: Easy to use and widely supported, Keras makes deep learning about as simple as deep learning can be.</p>
@@ -245,7 +260,7 @@ Now comes the fun part! Since we have all the characters, we need to pass the ch
   </li>
 </ul>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <h5 id="step-1"><strong>Step 1</strong></h5>
 
@@ -253,21 +268,28 @@ Now comes the fun part! Since we have all the characters, we need to pass the ch
   <p><strong>Creating a workspace.</strong></p>
 </blockquote>
 
-<p>I recommend making a conda environment because it makes project management much easier. Please follow the instructions in this <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/">link</a> for installing miniconda. Once installed open cmd/terminal and create an environment using-</p>
+<p>I recommend making a conda environment because it makes project management much easier. Please follow the instructions in this <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/" target="_blank" rel="noopener noreferrer">link</a> for installing miniconda. Once installed open cmd/terminal and create an environment using-</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-</pre></td><td class="code"><pre>    conda create <span class="nt">-n</span> <span class="s1">'name_of_the_environment'</span> <span class="nv">python</span><span class="o">=</span>3.6.7 
-</pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>    conda create <span class="nt">-n</span> <span class="s1">'name_of_the_environment'</span> <span class="nv">python</span><span class="o">=</span>3.6.7 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>Now let’s activate the environment:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-</pre></td><td class="code"><pre>    conda activate <span class="s1">'name_of_the_environment'</span> 
-</pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>    conda activate <span class="s1">'name_of_the_environment'</span> 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>This should set us inside our virtual environment. Time to install some libraries-</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -278,7 +300,8 @@ Now comes the fun part! Since we have all the characters, we need to pass the ch
 9
 10
 11
-</pre></td><td class="code"><pre>    <span class="c"># installing OpenCV</span>
+</pre></td>
+<td class="code"><pre>    <span class="c"># installing OpenCV</span>
     pip <span class="nb">install </span>opencv-python<span class="o">==</span>4.1.0
 
     <span class="c"># Installing Keras</span>
@@ -289,9 +312,10 @@ Now comes the fun part! Since we have all the characters, we need to pass the ch
 
     <span class="c">#Installing Scikit-Learn</span>
     pip <span class="nb">install </span>scikit-learn 
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <h5 id="step-2"><strong>Step 2</strong></h5>
 <blockquote>
@@ -303,14 +327,18 @@ Now comes the fun part! Since we have all the characters, we need to pass the ch
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># in your conda environment run
 </code></pre></div></div>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-</pre></td><td class="code"><pre>    jupyter notebook 
-</pre></td></tr></tbody></table></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre>    jupyter notebook 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>This should open Jupyter notebook in the default web browser.
 Once open, let’s import the libraries</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -329,7 +357,8 @@ Once open, let’s import the libraries</p>
 17
 18
 19
-</pre></td><td class="code"><pre>    <span class="c">#importing openCV</span>
+</pre></td>
+<td class="code"><pre>    <span class="c">#importing openCV</span>
     import cv2
 
     <span class="c">#importing numpy</span>
@@ -348,9 +377,10 @@ Once open, let’s import the libraries</p>
     from keras import backend as K
     from keras.utils import np_utils
     from sklearn.model_selection import train_test_split 
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="step-3"><strong>Step 3</strong></h5>
 
 <blockquote>
@@ -359,7 +389,8 @@ Once open, let’s import the libraries</p>
 
 <p>Let’s start simple by importing a sample image of a car with a license plate and define some functions:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -376,46 +407,48 @@ Once open, let’s import the libraries</p>
 15
 16
 17
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">extract_plate</span><span class="p">(</span><span class="n">img</span><span class="p">):</span> <span class="c1"># the function detects and perfors blurring on the number plate.
-</span>	<span class="n">plate_img</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></td>
+<td class="code"><pre><span class="k">def</span> <span class="nf">extract_plate</span><span class="p">(</span><span class="n">img</span><span class="p">):</span> <span class="c1"># the function detects and perfors blurring on the number plate.
+</span>	<span class="n">plate_img</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="nf">copy</span><span class="p">()</span>
 
 	<span class="c1">#Loads the data required for detecting the license plates from cascade classifier.
-</span>	<span class="n">plate_cascade</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">CascadeClassifier</span><span class="p">(</span><span class="s">'./indian_license_plate.xml'</span><span class="p">)</span>
+</span>	<span class="n">plate_cascade</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nc">CascadeClassifier</span><span class="p">(</span><span class="sh">'</span><span class="s">./indian_license_plate.xml</span><span class="sh">'</span><span class="p">)</span>
 
 	<span class="c1"># detects numberplates and returns the coordinates and dimensions of detected license plate's contours.
-</span>	<span class="n">plate_rect</span> <span class="o">=</span> <span class="n">plate_cascade</span><span class="p">.</span><span class="n">detectMultiScale</span><span class="p">(</span><span class="n">plate_img</span><span class="p">,</span> <span class="n">scaleFactor</span> <span class="o">=</span> <span class="mf">1.3</span><span class="p">,</span> <span class="n">minNeighbors</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span>
+</span>	<span class="n">plate_rect</span> <span class="o">=</span> <span class="n">plate_cascade</span><span class="p">.</span><span class="nf">detectMultiScale</span><span class="p">(</span><span class="n">plate_img</span><span class="p">,</span> <span class="n">scaleFactor</span> <span class="o">=</span> <span class="mf">1.3</span><span class="p">,</span> <span class="n">minNeighbors</span> <span class="o">=</span> <span class="mi">7</span><span class="p">)</span>
 
-	<span class="k">for</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)</span> <span class="ow">in</span> <span class="n">plate_rect</span><span class="p">:</span>
-		<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.02</span><span class="o">*</span><span class="n">img</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.025</span><span class="o">*</span><span class="n">img</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="c1">#parameter tuning
+	<span class="nf">for </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">h</span><span class="p">)</span> <span class="ow">in</span> <span class="n">plate_rect</span><span class="p">:</span>
+		<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="mf">0.02</span><span class="o">*</span><span class="n">img</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nf">int</span><span class="p">(</span><span class="mf">0.025</span><span class="o">*</span><span class="n">img</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="c1">#parameter tuning
 </span>		<span class="n">plate</span> <span class="o">=</span> <span class="n">plate_img</span><span class="p">[</span><span class="n">y</span><span class="o">+</span><span class="n">a</span><span class="p">:</span><span class="n">y</span><span class="o">+</span><span class="n">h</span><span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="o">+</span><span class="n">b</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">w</span><span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="p">:]</span>
 		<span class="c1"># finally representing the detected contours by drawing rectangles around the edges.
-</span>		<span class="n">cv2</span><span class="p">.</span><span class="n">rectangle</span><span class="p">(</span><span class="n">plate_img</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">h</span><span class="p">),</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
+</span>		<span class="n">cv2</span><span class="p">.</span><span class="nf">rectangle</span><span class="p">(</span><span class="n">plate_img</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">w</span><span class="p">,</span> <span class="n">y</span><span class="o">+</span><span class="n">h</span><span class="p">),</span> <span class="p">(</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">255</span><span class="p">),</span> <span class="mi">3</span><span class="p">)</span>
 
 	<span class="k">return</span> <span class="n">plate_img</span><span class="p">,</span> <span class="n">plate</span> <span class="c1"># returning the processed image
 </span> 
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
-<p>The above function works by taking image as input, then applying ‘haar cascade’ that is pre-trained to detect Indian license plates, here the parameter scaleFactor stands for a value by which input image can be scaled for better detection of license plate (<a href="https://sites.google.com/site/5kk73gpu2012/assignment/viola-jones-face-detection#TOC-Image-Pyramid">know more</a>). minNeighbors is just a parameter to reduce false positives, if this value is low, the algorithm may be more prone to giving a misrecognized outputs. (you can download the haar cascade file as ‘indian_license_plate.xml’ file from my <a href="https://github.com/SarthakV7/AI-based-indian-license-plate-detection">github</a> profile.)</p>
+<p>The above function works by taking image as input, then applying ‘haar cascade’ that is pre-trained to detect Indian license plates, here the parameter scaleFactor stands for a value by which input image can be scaled for better detection of license plate (<a href="https://sites.google.com/site/5kk73gpu2012/assignment/viola-jones-face-detection#TOC-Image-Pyramid" target="_blank" rel="noopener noreferrer">know more</a>). minNeighbors is just a parameter to reduce false positives, if this value is low, the algorithm may be more prone to giving a misrecognized outputs. (you can download the haar cascade file as ‘indian_license_plate.xml’ file from my <a href="https://github.com/SarthakV7/AI-based-indian-license-plate-detection" target="_blank" rel="noopener noreferrer">github</a> profile.)</p>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*RFqmJj0alAKWAqyBuihosw.jpeg" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*RFqmJj0alAKWAqyBuihosw.jpeg">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*S8bTK6q1LUuChQ2Fet6yfQ.jpeg" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*S8bTK6q1LUuChQ2Fet6yfQ.jpeg">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*w_LVI7pA6CehL0P5t6LhGQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*w_LVI7pA6CehL0P5t6LhGQ.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="step-4"><strong>Step 4</strong></h5>
 
 <blockquote>
@@ -424,7 +457,8 @@ Once open, let’s import the libraries</p>
 
 <p>Now let’s process this image further to make the character extraction process easy. We’ll start by defining some more functions for that.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -451,15 +485,16 @@ Once open, let’s import the libraries</p>
 25
 26
 27
-</pre></td><td class="code"><pre><span class="c1"># Find characters in the resulting images
+</pre></td>
+<td class="code"><pre><span class="c1"># Find characters in the resulting images
 </span><span class="k">def</span> <span class="nf">segment_characters</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="p">:</span>
 
     <span class="c1"># Preprocess cropped license plate image
-</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">333</span><span class="p">,</span> <span class="mi">75</span><span class="p">))</span>
-    <span class="n">img_gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">img_binary</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">threshold</span><span class="p">(</span><span class="n">img_gray</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span><span class="o">+</span><span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_OTSU</span><span class="p">)</span>
-    <span class="n">img_erode</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">erode</span><span class="p">(</span><span class="n">img_binary</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-    <span class="n">img_dilate</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">dilate</span><span class="p">(</span><span class="n">img_erode</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="mi">333</span><span class="p">,</span> <span class="mi">75</span><span class="p">))</span>
+    <span class="n">img_gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2GRAY</span><span class="p">)</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">img_binary</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">threshold</span><span class="p">(</span><span class="n">img_gray</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_BINARY</span><span class="o">+</span><span class="n">cv2</span><span class="p">.</span><span class="n">THRESH_OTSU</span><span class="p">)</span>
+    <span class="n">img_erode</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">erode</span><span class="p">(</span><span class="n">img_binary</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    <span class="n">img_dilate</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">dilate</span><span class="p">(</span><span class="n">img_erode</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 
     <span class="n">LP_WIDTH</span> <span class="o">=</span> <span class="n">img_dilate</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">LP_HEIGHT</span> <span class="o">=</span> <span class="n">img_dilate</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -474,11 +509,12 @@ Once open, let’s import the libraries</p>
 </span>    <span class="n">dimensions</span> <span class="o">=</span> <span class="p">[</span><span class="n">LP_WIDTH</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="n">LP_WIDTH</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">LP_HEIGHT</span><span class="o">/</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">LP_HEIGHT</span><span class="o">/</span><span class="mi">3</span><span class="p">]</span>
 
     <span class="c1"># Get contours within cropped license plate
-</span>    <span class="n">char_list</span> <span class="o">=</span> <span class="n">find_contours</span><span class="p">(</span><span class="n">dimensions</span><span class="p">,</span> <span class="n">img_dilate</span><span class="p">)</span>
+</span>    <span class="n">char_list</span> <span class="o">=</span> <span class="nf">find_contours</span><span class="p">(</span><span class="n">dimensions</span><span class="p">,</span> <span class="n">img_dilate</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">char_list</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>The above function takes in the image as input and performs the following operation on it-</p>
 
@@ -510,14 +546,15 @@ Eroding is a simple process used for removing unwanted pixels from the object’
   </li>
 </ul>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="step-5"><strong>Step 5</strong></h5>
 
 <blockquote>
   <p><strong>Segmenting the alphanumeric characters from the license plate.</strong></p>
 </blockquote>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -576,14 +613,15 @@ Eroding is a simple process used for removing unwanted pixels from the object’
 57
 58
 59
-</pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">import</span> <span class="nn">cv2</span>
+</pre></td>
+<td class="code"><pre><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">cv2</span>
 
 <span class="c1"># Match contours to license plate or character template
 </span><span class="k">def</span> <span class="nf">find_contours</span><span class="p">(</span><span class="n">dimensions</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span> <span class="p">:</span>
 
     <span class="c1"># Find all contours in the image
-</span>    <span class="n">cntrs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">findContours</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">cv2</span><span class="p">.</span><span class="n">RETR_TREE</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
+</span>    <span class="n">cntrs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">findContours</span><span class="p">(</span><span class="n">img</span><span class="p">.</span><span class="nf">copy</span><span class="p">(),</span> <span class="n">cv2</span><span class="p">.</span><span class="n">RETR_TREE</span><span class="p">,</span> <span class="n">cv2</span><span class="p">.</span><span class="n">CHAIN_APPROX_SIMPLE</span><span class="p">)</span>
 
     <span class="c1"># Retrieve potential dimensions
 </span>    <span class="n">lower_width</span> <span class="o">=</span> <span class="n">dimensions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -593,26 +631,26 @@ Eroding is a simple process used for removing unwanted pixels from the object’
 
 
     <span class="c1"># Check largest 5 or  15 contours for license plate or character respectively
-</span>    <span class="n">cntrs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cntrs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">cv2</span><span class="p">.</span><span class="n">contourArea</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)[:</span><span class="mi">15</span><span class="p">]</span>
+</span>    <span class="n">cntrs</span> <span class="o">=</span> <span class="nf">sorted</span><span class="p">(</span><span class="n">cntrs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">cv2</span><span class="p">.</span><span class="n">contourArea</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)[:</span><span class="mi">15</span><span class="p">]</span>
 
     <span class="n">x_cntr_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">target_contours</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">img_res</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">cntr</span> <span class="ow">in</span> <span class="n">cntrs</span> <span class="p">:</span>
         <span class="c1">#detects contour in binary image and returns the coordinates of rectangle enclosing it
-</span>        <span class="n">intX</span><span class="p">,</span> <span class="n">intY</span><span class="p">,</span> <span class="n">intWidth</span><span class="p">,</span> <span class="n">intHeight</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">boundingRect</span><span class="p">(</span><span class="n">cntr</span><span class="p">)</span>
+</span>        <span class="n">intX</span><span class="p">,</span> <span class="n">intY</span><span class="p">,</span> <span class="n">intWidth</span><span class="p">,</span> <span class="n">intHeight</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">boundingRect</span><span class="p">(</span><span class="n">cntr</span><span class="p">)</span>
 
         <span class="c1">#checking the dimensions of the contour to filter out the characters by contour's size
 </span>        <span class="k">if</span> <span class="n">intWidth</span> <span class="o">&gt;</span> <span class="n">lower_width</span> <span class="ow">and</span> <span class="n">intWidth</span> <span class="o">&lt;</span> <span class="n">upper_width</span> <span class="ow">and</span> <span class="n">intHeight</span> <span class="o">&gt;</span> <span class="n">lower_height</span> <span class="ow">and</span> <span class="n">intHeight</span> <span class="o">&lt;</span> <span class="n">upper_height</span> <span class="p">:</span>
-            <span class="n">x_cntr_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">intX</span><span class="p">)</span> <span class="c1">#stores the x coordinate of the character's contour, to used later for indexing the contours
+            <span class="n">x_cntr_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">intX</span><span class="p">)</span> <span class="c1">#stores the x coordinate of the character's contour, to used later for indexing the contours
 </span>
-            <span class="n">char_copy</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">44</span><span class="p">,</span><span class="mi">24</span><span class="p">))</span>
+            <span class="n">char_copy</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="mi">44</span><span class="p">,</span><span class="mi">24</span><span class="p">))</span>
             <span class="c1">#extracting each character using the enclosing rectangle's coordinates.
 </span>            <span class="n">char</span> <span class="o">=</span> <span class="n">img</span><span class="p">[</span><span class="n">intY</span><span class="p">:</span><span class="n">intY</span><span class="o">+</span><span class="n">intHeight</span><span class="p">,</span> <span class="n">intX</span><span class="p">:</span><span class="n">intX</span><span class="o">+</span><span class="n">intWidth</span><span class="p">]</span>
-            <span class="n">char</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
+            <span class="n">char</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">resize</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
 
             <span class="c1"># Make result formatted for classification: invert colors
-</span>            <span class="n">char</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="n">subtract</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="n">char</span><span class="p">)</span>
+</span>            <span class="n">char</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">subtract</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="n">char</span><span class="p">)</span>
 
             <span class="c1"># Resize the image to 24x44 with black border
 </span>            <span class="n">char_copy</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">42</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">22</span><span class="p">]</span> <span class="o">=</span> <span class="n">char</span>
@@ -621,21 +659,22 @@ Eroding is a simple process used for removing unwanted pixels from the object’
             <span class="n">char_copy</span><span class="p">[</span><span class="mi">42</span><span class="p">:</span><span class="mi">44</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="n">char_copy</span><span class="p">[:,</span> <span class="mi">22</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 
-            <span class="n">img_res</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">char_copy</span><span class="p">)</span> <span class="c1">#List that stores the character's binary image (unsorted)
+            <span class="n">img_res</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">char_copy</span><span class="p">)</span> <span class="c1">#List that stores the character's binary image (unsorted)
 </span>
     <span class="c1">#Return characters on ascending order with respect to the x-coordinate (most-left character first)
 </span>
     <span class="c1">#arbitrary function that stores sorted list of character indeces
-</span>    <span class="n">indices</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_cntr_list</span><span class="p">)),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">x_cntr_list</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
+</span>    <span class="n">indices</span> <span class="o">=</span> <span class="nf">sorted</span><span class="p">(</span><span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">x_cntr_list</span><span class="p">)),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">x_cntr_list</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
     <span class="n">img_res_copy</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
-        <span class="n">img_res_copy</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">img_res</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="c1"># stores character images according to their index
-</span>    <span class="n">img_res</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">img_res_copy</span><span class="p">)</span>
+        <span class="n">img_res_copy</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">img_res</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="c1"># stores character images according to their index
+</span>    <span class="n">img_res</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">img_res_copy</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">img_res</span>
 <span class="n">view</span> <span class="n">rawcharacter_detection</span><span class="p">.</span><span class="n">py</span> <span class="n">hosted</span> <span class="k">with</span> <span class="err">❤</span> <span class="n">by</span> <span class="n">GitHub</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <p>After step 4 we should have a clean binary image to work on. In this step, we will be applying some more image processing to extract the individual characters from the license plate. The steps involved will be-</p>
 
@@ -645,13 +684,13 @@ Eroding is a simple process used for removing unwanted pixels from the object’
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*I1-aZ-szf-SqrxueEtB-Tg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*I1-aZ-szf-SqrxueEtB-Tg.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*8blZEtiXo9vxriC3yp1EDA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*8blZEtiXo9vxriC3yp1EDA.png">
     </div>
 </div>
 
@@ -661,7 +700,7 @@ Eroding is a simple process used for removing unwanted pixels from the object’
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*0l5qoklROE2bdIq4JkXfuA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*0l5qoklROE2bdIq4JkXfuA.png">
     </div>
 </div>
 
@@ -677,7 +716,7 @@ After this step, we should have all the characters extracted as binary images.</
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*PVdInfmQoYIxyYyp81Kx1w.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*PVdInfmQoYIxyYyp81Kx1w.png">
     </div>
 </div>
 
@@ -685,7 +724,7 @@ After this step, we should have all the characters extracted as binary images.</
   <li>The characters may be unsorted but don’t worry, the last few lines of the code take care of that. It sorts the character according to the position of their bounding rectangle from the left boundary of the plate.</li>
 </ul>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="step-6"><strong>Step 6</strong></h5>
 
 <blockquote>
@@ -698,16 +737,17 @@ After this step, we should have all the characters extracted as binary images.</
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2048/1*KhUiEJdZy42JfkCfwm7jjg.jpeg" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2048/1*KhUiEJdZy42JfkCfwm7jjg.jpeg">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <ul>
   <li>For modeling, we will be using a Convolutional Neural Network with 3 layers.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -715,7 +755,8 @@ After this step, we should have all the characters extracted as binary images.</
 6
 7
 8
-</pre></td><td class="code"><pre><span class="c"># create model</span>
+</pre></td>
+<td class="code"><pre><span class="c"># create model</span>
 model <span class="o">=</span> Sequential<span class="o">()</span>
 model.add<span class="o">(</span>Conv2D<span class="o">(</span><span class="nv">filters</span><span class="o">=</span>32, <span class="nv">kernel_size</span><span class="o">=(</span>5,5<span class="o">)</span>, <span class="nv">input_shape</span><span class="o">=(</span>28, 28, 1<span class="o">)</span>, <span class="nv">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="o">))</span>
 model.add<span class="o">(</span>MaxPooling2D<span class="o">(</span><span class="nv">pool_size</span><span class="o">=(</span>2, 2<span class="o">)))</span>
@@ -723,11 +764,12 @@ model.add<span class="o">(</span>Dropout<span class="o">(</span><span class="nv"
 model.add<span class="o">(</span>Flatten<span class="o">())</span>
 model.add<span class="o">(</span>Dense<span class="o">(</span><span class="nv">units</span><span class="o">=</span>128, <span class="nv">activation</span><span class="o">=</span><span class="s1">'relu'</span><span class="o">))</span>
 model.add<span class="o">(</span>Dense<span class="o">(</span><span class="nv">units</span><span class="o">=</span>36, <span class="nv">activation</span><span class="o">=</span><span class="s1">'softmax'</span><span class="o">))</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2248/1*FAMyA1skMbdXYQlmUM6Kfw.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2248/1*FAMyA1skMbdXYQlmUM6Kfw.png">
     </div>
 </div>
 
@@ -742,13 +784,13 @@ model.add<span class="o">(</span>Dense<span class="o">(</span><span class="nv">u
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*njuH4XVXf-l9pR_RorUOrA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*njuH4XVXf-l9pR_RorUOrA.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*iUxZ6ZNaizs2DzhDvTWDgg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*iUxZ6ZNaizs2DzhDvTWDgg.png">
     </div>
 </div>
 
@@ -759,7 +801,7 @@ model.add<span class="o">(</span>Dense<span class="o">(</span><span class="nv">u
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/10140/1*cEpnL1pqYe45cBZIfOxASw.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/10140/1*cEpnL1pqYe45cBZIfOxASw.png">
     </div>
 </div>
 
@@ -775,7 +817,7 @@ model.add<span class="o">(</span>Dense<span class="o">(</span><span class="nv">u
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*BLP5zEDWc6kwBpThM5jFjQ.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*BLP5zEDWc6kwBpThM5jFjQ.png">
     </div>
 </div>
 
@@ -785,11 +827,11 @@ model.add<span class="o">(</span>Dense<span class="o">(</span><span class="nv">u
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*_uXiq8n5QvQzlJLNjZRLSg.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*_uXiq8n5QvQzlJLNjZRLSg.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="step-7"><strong>Step 7</strong></h5>
 
 <blockquote>
@@ -801,19 +843,19 @@ model.add<span class="o">(</span>Dense<span class="o">(</span><span class="nv">u
     <p>The data we will be using contains images of alphabets (A-Z) and digits (0–9) of size 28x28, also the data is balanced so we won’t have to do any kind of data tuning here.</p>
   </li>
   <li>
-    <p>I’ve created a <a href="https://github.com/SarthakV7/AI-based-indian-license-plate-detection/blob/master/data.zip">zip file</a> that contains data as per the directory structure below, with a train test split of 80:20</p>
+    <p>I’ve created a <a href="https://github.com/SarthakV7/AI-based-indian-license-plate-detection/blob/master/data.zip" target="_blank" rel="noopener noreferrer">zip file</a> that contains data as per the directory structure below, with a train test split of 80:20</p>
   </li>
 </ul>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*uXcMknHKArBw3f5J.jpeg" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*uXcMknHKArBw3f5J.jpeg">
     </div>
 </div>
 
 <ul>
   <li>
-    <p>We’ll be using ImageDataGenerator class available in keras to generate some more data using image augmentation techniques like width shift, height shift. To know more about ImageDataGenerator, please check out <a href="https://medium.com/@vijayabhaskar96/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720">this</a> nice blog.</p>
+    <p>We’ll be using ImageDataGenerator class available in keras to generate some more data using image augmentation techniques like width shift, height shift. To know more about ImageDataGenerator, please check out <a href="https://medium.com/@vijayabhaskar96/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720" target="_blank" rel="noopener noreferrer">this</a> nice blog.</p>
   </li>
   <li>
     <p>Width shift: Accepts a float value denoting by what fraction the image will be shifted left and right.
@@ -821,7 +863,8 @@ Height shift: Accepts a float value denoting by what fraction the image will be 
   </li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -836,29 +879,32 @@ Height shift: Accepts a float value denoting by what fraction the image will be 
 13
 14
 15
-</pre></td><td class="code"><pre> <span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
-<span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
+</pre></td>
+<td class="code"><pre> <span class="kn">from</span> <span class="n">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+<span class="n">train_datagen</span> <span class="o">=</span> <span class="nc">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.05</span><span class="p">)</span>
 
-<span class="n">train_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
-        <span class="s">'data/train'</span><span class="p">,</span>  <span class="c1"># this is the target directory
+<span class="n">train_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="p">.</span><span class="nf">flow_from_directory</span><span class="p">(</span>
+        <span class="sh">'</span><span class="s">data/train</span><span class="sh">'</span><span class="p">,</span>  <span class="c1"># this is the target directory
 </span>        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">),</span>  <span class="c1"># all images will be resized to 28x28
 </span>        <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-        <span class="n">class_mode</span><span class="o">=</span><span class="s">'categorical'</span><span class="p">)</span>
+        <span class="n">class_mode</span><span class="o">=</span><span class="sh">'</span><span class="s">categorical</span><span class="sh">'</span><span class="p">)</span>
 
-<span class="n">validation_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="p">.</span><span class="n">flow_from_directory</span><span class="p">(</span>
-        <span class="s">'data/val'</span><span class="p">,</span>  <span class="c1"># this is the target directory
+<span class="n">validation_generator</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="p">.</span><span class="nf">flow_from_directory</span><span class="p">(</span>
+        <span class="sh">'</span><span class="s">data/val</span><span class="sh">'</span><span class="p">,</span>  <span class="c1"># this is the target directory
 </span>        <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span><span class="mi">28</span><span class="p">),</span>  <span class="c1"># all images will be resized to 28x28
 </span>        <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-        <span class="n">class_mode</span><span class="o">=</span><span class="s">'categorical'</span><span class="p">)</span>
+        <span class="n">class_mode</span><span class="o">=</span><span class="sh">'</span><span class="s">categorical</span><span class="sh">'</span><span class="p">)</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <ul>
   <li>It’s time to train our model now!
 we will use ‘categorical_crossentropy’ as loss function, ‘Adam’ as optimization function and ‘Accuracy’ as our error matrix.</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -875,24 +921,26 @@ we will use ‘categorical_crossentropy’ as loss function, ‘Adam’ as optim
 15
 16
 17
-</pre></td><td class="code"><pre> <span class="kn">import</span> <span class="nn">datetime</span>
+</pre></td>
+<td class="code"><pre> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="k">class</span> <span class="nc">stop_training_callback</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="n">Callback</span><span class="p">):</span>
-  <span class="k">def</span> <span class="nf">on_epoch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">logs</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'val_acc'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.992</span><span class="p">):</span>
-      <span class="bp">self</span><span class="p">.</span><span class="n">model</span><span class="p">.</span><span class="n">stop_training</span> <span class="o">=</span> <span class="bp">True</span>
+  <span class="k">def</span> <span class="nf">on_epoch_end</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">logs</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">val_acc</span><span class="sh">'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0.992</span><span class="p">):</span>
+      <span class="n">self</span><span class="p">.</span><span class="n">model</span><span class="p">.</span><span class="n">stop_training</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="n">log_dir</span><span class="o">=</span><span class="s">"logs/fit/"</span> <span class="o">+</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">strftime</span><span class="p">(</span><span class="s">"%Y%m%d-%H%M%S"</span><span class="p">)</span>
-<span class="n">tensorboard_callback</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="n">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="n">log_dir</span><span class="p">,</span> <span class="n">histogram_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">log_dir</span><span class="o">=</span><span class="sh">"</span><span class="s">logs/fit/</span><span class="sh">"</span> <span class="o">+</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">().</span><span class="nf">strftime</span><span class="p">(</span><span class="sh">"</span><span class="s">%Y%m%d-%H%M%S</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">tensorboard_callback</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">callbacks</span><span class="p">.</span><span class="nc">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="n">log_dir</span><span class="p">,</span> <span class="n">histogram_freq</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span><span class="n">tensorboard_callback</span><span class="p">,</span> <span class="n">stop_training_callback</span><span class="p">()]</span>
-<span class="n">model</span><span class="p">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">train_generator</span><span class="p">,</span>
+<span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span><span class="n">tensorboard_callback</span><span class="p">,</span> <span class="nf">stop_training_callback</span><span class="p">()]</span>
+<span class="n">model</span><span class="p">.</span><span class="nf">fit_generator</span><span class="p">(</span><span class="n">train_generator</span><span class="p">,</span>
       <span class="n">steps_per_epoch</span> <span class="o">=</span> <span class="n">train_generator</span><span class="p">.</span><span class="n">samples</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span>
       <span class="n">validation_data</span> <span class="o">=</span> <span class="n">validation_generator</span><span class="p">,</span>
       <span class="n">validation_steps</span> <span class="o">=</span> <span class="n">validation_generator</span><span class="p">.</span><span class="n">samples</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span>
       <span class="n">epochs</span> <span class="o">=</span> <span class="mi">80</span><span class="p">,</span> <span class="n">callbacks</span><span class="o">=</span><span class="n">callbacks</span><span class="p">)</span>
  
-</pre></td></tr></tbody></table></code></pre></figure>
+</pre></td>
+</tr></tbody></table></code></pre></figure>
 
 <ul>
   <li>After training for 23 epochs, the model achieved an accuracy of 99.54%.</li>
@@ -900,17 +948,17 @@ we will use ‘categorical_crossentropy’ as loss function, ‘Adam’ as optim
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/4332/1*HAA_UPvZRihw3i17aYLvVA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/4332/1*HAA_UPvZRihw3i17aYLvVA.png">
     </div>
 </div>
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2692/1*o9wFBmX69Nm44RbMngw6dA.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2692/1*o9wFBmX69Nm44RbMngw6dA.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 <h5 id="step-8"><strong>Step 8</strong></h5>
 
 <blockquote>
@@ -921,7 +969,7 @@ we will use ‘categorical_crossentropy’ as loss function, ‘Adam’ as optim
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3540/1*esXDwU6Brah9mL42BY0M-A.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3540/1*esXDwU6Brah9mL42BY0M-A.png">
     </div>
 </div>
 
@@ -929,11 +977,11 @@ we will use ‘categorical_crossentropy’ as loss function, ‘Adam’ as optim
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-1">
-        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*9OWCIVp8wZvYbgajn_mC-w.png" />
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/1*9OWCIVp8wZvYbgajn_mC-w.png">
     </div>
 </div>
 
-<p><img src="" alt="" /></p>
+<p><img src="" alt=""></p>
 
 <blockquote>
   <p><strong>Final comment</strong></p>
@@ -944,9 +992,9 @@ we will use ‘categorical_crossentropy’ as loss function, ‘Adam’ as optim
 <p>And if you have any doubts regarding this project, please leave a comment in the response section.</p>
 
 <p>The full project is available on my Github:
-<a href="https://github.com/SarthakV7/AI-based-indian-license-plate-detection">https://github.com/SarthakV7/AI-based-indian-license-plate-detection</a></p>
+<a href="https://github.com/SarthakV7/AI-based-indian-license-plate-detection" target="_blank" rel="noopener noreferrer">https://github.com/SarthakV7/AI-based-indian-license-plate-detection</a></p>
 
-<p>Find me on LinkedIn: <a href="http://www.linkedin.com/in/sarthak-vajpayee">www.linkedin.com/in/sarthak-vajpayee</a></p>
+<p>Find me on LinkedIn: <a href="http://www.linkedin.com/in/sarthak-vajpayee" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/sarthak-vajpayee</a></p>
 
   </article>
 
@@ -961,8 +1009,8 @@ we will use ‘categorical_crossentropy’ as loss function, ‘Adam’ as optim
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2021 Sarthak  Vajpayee.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+    © Copyright 2023 Sarthak  Vajpayee.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
 
     
     
